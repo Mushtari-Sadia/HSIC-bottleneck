@@ -108,4 +108,8 @@ def get_layer_parameters(model, idx_range):
 
 def to_categorical(y, num_classes):
     """ 1-hot encodes a tensor """
-    return torch.squeeze(torch.eye(num_classes)[y])
+    y = y.to(torch.device('cuda')) if torch.cuda.is_available() else y.to(torch.device('cpu'))
+
+    # Create the one-hot encoded tensor on the same device as y
+    eye_tensor = torch.eye(num_classes, device=y.device)
+    return torch.squeeze(eye_tensor[y])

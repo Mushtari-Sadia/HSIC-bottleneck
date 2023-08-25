@@ -7,7 +7,7 @@ from    torchvision import datasets, transforms
 
 from tqdm import tqdm
 import numpy as np
-import yaml
+# import yaml
 import scipy as sp
 import os
 import json
