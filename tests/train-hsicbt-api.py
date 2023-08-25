@@ -1,6 +1,6 @@
-from hsicbt.core.train_hsic import hsic_train
-from hsicbt.model.mhlinear import ModelLinear
-from hsicbt.utils.dataset import get_dataset_from_code
+from core.train_hsic import hsic_train
+from model.mhlinear import ModelLinear
+from utils.dataset import get_dataset_from_code
 
 # # # configuration
 config_dict = {}
